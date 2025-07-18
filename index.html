@@ -270,29 +270,59 @@ The results demonstrate that the proposed framework effectively bridges the symb
       <h2>Simulation Evaluation</h2>
       <p>We conducted a comprehensive evaluation of the motion planning part in the proposed framework BT-TL-DMPs through systematic simulation. Here we show the comparison of DMP simulation in <strong><i>(left)</i></strong> generation with new start/goal positions, <strong><i>(mid)</i></strong> obstacle avoidance via trajectory-based objective, <strong><i>(right)</i></strong> obstacle avoidance via forcing-term objective.</p>
       
-      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 0; background-color: #f0f0f0; padding: 15px; border-radius: 8px;">
+      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 0; background-color: #f0f0f0; padding: 30px; border-radius: 8px;">
         <div style="text-align: center; margin: 0 10px;">
-          <img src="./static/images/method4.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <img src="./static/images/method4.png" style="height: 240px; width: auto; max-width: 100%; object-fit: cover;" />
           <p>The Performance of Generalizing DMPs</p>
         </div>
         <div style="text-align: center; margin: 0 10px;">
-          <img src="./static/images/method5.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <img src="./static/images/method5.png" style="height: 240px; width: auto; max-width: 100%; object-fit: cover;" />
           <p>Unnatural Obstacle Avoidance</p>
         </div>
         <div style="text-align: center; margin: 0 10px;">
-          <img src="./static/images/method6.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <img src="./static/images/method6.png" style="height: 240px; width: auto; max-width: 100%; object-fit: cover;" />
           <p>Excellent Obstacle Avoidance</p>
         </div>
       </div>
 
       <div class="content has-text-justified" style="margin-top: 20px">
-        <p> Here we show a clear overview of the experimental procedure using the propose framework. Please visit <strong><a href="./static/videos/video.mp4" target="_blank">here</a></strong> to see more details about our work experiment part.</p>
+        <p>Moreover, we employed more simulation studies to validate the effectiveness of the proposed methods in generalizing DMP-based manipulation skills under various spatio-temporal constraints. Here we show via-point, obstacle avoidance, space‐limit, and velocity‐limit scenarios performances for STL-DMP generalization.</p>
       </div>
 
-      <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-        <img src="./static/images/exp.png"
-             style="width: 90%; max-width: 1000px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 0; background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+        <div style="text-align: center; margin: 0 5px;">
+          <img src="./static/images/method7.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Via‐point Scenario</p>
+        </div>
+        <div style="text-align: center; margin: 0 5px;">
+          <img src="./static/images/method8.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Obstacle Scenario</p>
+        </div>
+        <div style="text-align: center; margin: 0 5px;">
+          <img src="./static/images/method9.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Space Limit Scenario</p>
+        </div>
+        <div style="text-align: center; margin: 0 5px;">
+          <img src="./static/images/method10.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Velocity Limit Scenario</p>
+        </div>
       </div>
+
+      <div class="content has-text-justified" style="margin-top: 20px">
+        <p>And. here we show the corresponding state temporal variations in space‐limit and velocity‐limit scenarios.</p>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 0; background-color: #f0f0f0; padding: 10px; border-radius: 8px;">
+        <div style="text-align: center; margin: 0 5px;">
+          <img src="./static/images/method11.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Temporal variation of <i>y</i> under space limit</p>
+        </div>
+        <div style="text-align: center; margin: 0 5px;">
+          <img src="./static/images/method12.png" style="height: 220px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Temporal variation of <i>z</i> under velocity limit</p>
+        </div>
+      </div>
+      
    </div>
 </section>
 
