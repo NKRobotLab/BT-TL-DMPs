@@ -332,41 +332,58 @@ The results demonstrate that the proposed framework effectively bridges the symb
     <!-- Summary of the work -->
     <div class="content">
       <h2>Real-World Experiments</h2>
-      <p>Several periodic MPs and transitional MPs are contained in multi-periodic skills in human daily life. The following results show the fluent performance</p>
+      <p>To validate the proposed BT-TL-DMPs framework in real-world settings, we conduct two long-horizon robotic manipulation tasks, which aim to demonstrate how the integration of Behavior Trees, Signal Temporal Logic, and Dynamical Movement Primitives enables modular, reactive, and generalizable robotic behaviors under complex spatio-temporal constraints.</p>
 	<!-- Large plot display -->
    
-  <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px; background-color: #f0f0f0; padding: 15px; border-radius: 8px;">
-    <div style="text-align: center; margin: 0 15px;">
-      <img src="./static/videos/p.gif" style="height: 300px; width: auto; max-width: 100%; object-fit: cover;" />
-      <p>Execution of First Periodic MP</p>
-    </div>
-    <div style="text-align: center; margin: 0 15px;">
-      <img src="./static/videos/t.gif" style="height: 300px; width: auto; max-width: 100%; object-fit: cover;" />
-      <p>Execution of First Transitional MP</p>
-    </div>
-  </div>
-  </div>
+      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 0; background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+        <div style="text-align: center; margin: 0 20px;">
+          <img src="./static/images/exp1.png" style="height: 250px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Scene before Breakfast Preparation</p>
+        </div>
+        <div style="text-align: center; margin: 0 20px;">
+          <img src="./static/images/exp2.png" style="height: 250px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Scene after Breakfast Preparation</p>
+        </div>
+        <div style="text-align: center; margin: 0 20px;">
+          <img src="./static/images/exp3.png" style="height: 250px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Breakfast Preparation Trajectories</p>
+        </div>
+      </div>
 
-  <p>And also, Impedance control can help to improve the performance of cleaning: </p>
-  
+      <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 0; background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+        <div style="text-align: center; margin: 0 20px;">
+          <img src="./static/images/exp4.png" style="height: 250px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Scene before Afternoon Tea Preparation</p>
+        </div>
+        <div style="text-align: center; margin: 0 20px;">
+          <img src="./static/images/exp5.png" style="height: 250px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Scene after Afternoon Tea Preparation</p>
+        </div>
+        <div style="text-align: center; margin: 0 20px;">
+          <img src="./static/images/exp6.png" style="height: 250px; width: auto; max-width: 100%; object-fit: cover;" />
+          <p>Afternoon Tea Preparation Preparation</p>
+        </div>
+      </div>
+
+<p> Here we show above two tasks using the proposed framework. Please visit <strong><a href="./static/videos/video.mp4" target="_blank">here</a></strong> to see more details about our work experiment part.</p>
 
 <div class="columns is-centered" style="margin-top: 10px;">
 <div class="column">
   <div class="content">
-    <h4 class="title is-5" style="text-align: center;">With Impedance Control</h4>
+    <h4 class="title is-5" style="text-align: center;">Breakfast Preparation</h4>
     <video id="with" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/with.mp4"
+      <source src="./static/videos/1.mp4"
               type="video/mp4">
     </video>
   </div>
 </div>
 
 <div class="column">
-  <h4 class="title is-5" style="text-align: center;">Without Impedance Control</h4>
+  <h4 class="title is-5" style="text-align: center;">Afternoon Tea Preparation</h4>
   <div class="columns is-centered">
     <div class="column content">
       <video id="without" autoplay controls muted loop playsinline height="100%">
-        <source src="./static/videos/without.mp4"
+        <source src="./static/videos/2.mp4"
                 type="video/mp4">
       </video>
     </div>
