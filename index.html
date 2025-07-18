@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="LAMPS">
+        content="BT-TL-DMPs">
   <meta name="keywords" content="Learning from Demonstration, Task and Motion Planning, Manipulation Planning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LAMPS</title>
+  <title>BT-TL-DMPs</title>
 
 
   <script>
@@ -108,7 +108,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" style="font-size: 2.55rem;">LAMPS💡: A Novel Robot Generalization Framework for Learning Adaptive Multi-Periodic Skills</h1>
+          <h1 class="title is-1 publication-title" style="font-size: 2.55rem;">BT-TL-DMPs: A Novel Robot TAMP Framework  Combining Behavior Tree, Temporal Logic and Dynamical Movement Primitives</h1>
 
 
 
@@ -117,7 +117,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://nkrobotlab.github.io/LAMPS/"
+                <a href="https://nkrobotlab.github.io/BT-TL-DMPs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -126,7 +126,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://nkrobotlab.github.io/LAMPS/"
+                <a href="https://nkrobotlab.github.io/BT-TL-DMPs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -146,7 +146,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://nkrobotlab.github.io/LAMPS/"
+                <a href="https://nkrobotlab.github.io/BT-TL-DMPs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -163,18 +163,9 @@
   </div>
 </section>
 
-  
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="text-align: center;">
-      <img id="teaser" src="./static/images/top.png" alt="Teaser Image" style="width: 75%; display: block; margin: 0 auto;">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">The</span> executing of the multi-periodic movements skills.
-      </h2>
-    </div>
-  </div>
-</section>
-  
+
+
+	
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -184,13 +175,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-Learning from Demonstrations (LfD) methods are applied to transfer human skills to robots from expert demonstrations, enabling them to perform complex tasks.
-However, existing methods often struggle to handle such long-horizon human skills as cleaning or wiping stains on the surface, which involve multiple periodic and transitional movement primitives. 
-To address this limitation, this paper first proposes a novel framework for segmenting, learning, and generalizing multi-periodic human skills, enabling robots to effectively learn different movement primitives and execute these skills in new scenarios.
-Specifically, The framework introduces an unsupervised learning method to segment long-horizon human demonstrations into periodic and discrete movement primitives. 
-Further, a novel type of discrete dynamical movement primitives, namely transitional movement primitives, is employed to enhance the fluidity of combining different periodic movement primitives in skills.
-To validate the effectiveness of the proposed approach, we conduct extensive experimental evaluations, including step-by-step validation of each procedure's methods in simulation and the implementation of the entire presented framework in the real world.
-The results confirm that the proposed framework accurately learns and generalizes multi-periodic human skills, providing a feasible solution for transferring complex multi-periodic demonstrations to robots in practical applications.
+In the field of Learning from Demonstration (LfD), enabling robots to generalize learned manipulation skills to novel scenarios for long-horizon tasks remains challenging. 
+Specifically, it is still difficult for robots to adapt the learned skills to new environments with different tasks and motion requirements, especially in long-horizon, multi-stage scenarios with intricate constraints. 
+This paper proposes a novel hierarchical framework, called BT-TL-DMPs, that integrates Behavior Tree (BT), Temporal Logic (TL), and Dynamical Movement Primitives (DMPs) to address this problem. 
+Within this framework, Signal Temporal Logic (STL) is employed to formally specify complex, long-horizon task requirements and constraints. 
+These STL specifications are systematically transformed to generate reactive and modular BTs for high-level decision-making task structure. 
+An STL-constrained DMP optimization method is proposed to optimize the DMP forcing term, allowing the learned motion primitives to adapt flexibly while satisfying intricate spatiotemporal requirements and, crucially, preserving the essential dynamics learned from demonstrations.
+The framework is validated through simulations demonstrating generalization capabilities under various STL constraints and real-world experiments on several long-horizon robotic manipulation tasks. 
+The results demonstrate that the proposed framework effectively bridges the symbolic-motion gap, enabling more reliable and generalizable autonomous manipulation for complex robotic tasks.
           </p>
         </div>
       </div>
