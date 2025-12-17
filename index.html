@@ -108,7 +108,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" style="font-size: 2.6rem;">BT-TL-DMPs<img src="./static/images/logo2.ico" style="width:1em; height:1em; vertical-align:middle; margin: 0 0.2em;" alt="icon">: A Novel Robot TAMP Framework  Combining Behavior Tree, Temporal Logic and Dynamical Movement Primitives</h1>
+          <h1 class="title is-1 publication-title" style="font-size: 2.73rem;">BT-TL-DMPs<img src="./static/images/logo2.ico" style="width:1em; height:1em; vertical-align:middle; margin: 0 0.2em;" alt="icon">: A Novel Robot TAMP Framework  Combining Behavior Tree, Temporal Logic and Dynamical Movement Primitives</h1>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -189,13 +189,14 @@
         <div class="content has-text-justified">
           <p>
 In the field of Learning from Demonstration (LfD), enabling robots to generalize learned manipulation skills to novel scenarios for long-horizon tasks remains challenging. 
-Specifically, it is still difficult for robots to adapt the learned skills to new environments with different tasks and motion requirements, especially in long-horizon, multi-stage scenarios with intricate constraints. 
+Specifically, it is still difficult for robots to adapt the learned skills to new environments with different task and motion requirements, especially in long-horizon, multi-stage scenarios with intricate constraints. 
 This paper proposes a novel hierarchical framework, called BT-TL-DMPs, that integrates Behavior Tree (BT), Temporal Logic (TL), and Dynamical Movement Primitives (DMPs) to address this problem. 
 Within this framework, Signal Temporal Logic (STL) is employed to formally specify complex, long-horizon task requirements and constraints. 
 These STL specifications are systematically transformed to generate reactive and modular BTs for high-level decision-making task structure. 
-An STL-constrained DMP optimization method is proposed to optimize the DMP forcing term, allowing the learned motion primitives to adapt flexibly while satisfying intricate spatiotemporal requirements and, crucially, preserving the essential dynamics learned from demonstrations.
-The framework is validated through simulations demonstrating generalization capabilities under various STL constraints and real-world experiments on several long-horizon robotic manipulation tasks. 
-The results demonstrate that the proposed framework effectively bridges the symbolic-motion gap, enabling more reliable and generalizable autonomous manipulation for complex robotic tasks.
+An STL-constrained DMP optimization method is proposed to optimize the DMP forcing term, allowing the learned motion primitives to adapt flexibly while satisfying intricate spatiotemporal requirements and, crucially, preserving the essential dynamics learned from demonstrations. 
+The framework is validated through simulations demonstrating generalization capabilities under various STL constraints and real-world experiments on several long-horizon robotic manipulation tasks, where it significantly improves the success rate from 0.25 to 0.85, compared with the baseline.
+The results demonstrate that the proposed framework effectively bridges the symbolic-motion gap, enabling more reliable and generalizable autonomous manipulation for complex robotic tasks. 
+
           </p>
         </div>
       </div>
@@ -216,7 +217,7 @@ The results demonstrate that the proposed framework effectively bridges the symb
     <div class="content" style="margin-top: 20px;">
     <ul>
         <li>A task-level planning method (from STL to BTs) is designed, enabling the soundness of high-level decisions across diverse scenarios effectively.</li>
-        <li>An STL‐constrained DMP optimization method is developed to preserve demonstrated dynamics and enforce task‐specific spatiotemporal constraints for efficient skill adaptation and generalization.</li>
+        <li>An STL-constrained DMP optimization method is developed to preserve demonstrated dynamics and enforce task-specific spatiotemporal constraints for efficient skill adaptation and generalization.</li>
         <li>The efficacy of the proposed framework is evaluated through both simulations and experiments, which validate the framework's efficacy in making task-level decisions and generalizing learned behaviors to tackle a wide range of complex tasks in real-world settings.</li>
       </ul>
       <p> Here we show a brief overview of the proposed robot TAMP framework, combining with <strong>BT, TL, and DMPs</strong><img src="./static/images/logo2.ico" style="width:1em; height:1em; vertical-align:middle; margin: 0 0.2em;" alt="icon">.</p>
@@ -332,6 +333,11 @@ The results demonstrate that the proposed framework effectively bridges the symb
     <!-- Summary of the work -->
     <div class="content">
       <h2>Real-World Experiments</h2>
+      <p>Here we show the basic set up with random objects positions in the whole real-world experiments process, which aims to execute manipulations, including different pick-and-place, pull out napkin and pour water actions.</p>
+		    <div style="text-align: center; margin-top: 20px; margin-bottom: 20px"> <!-- Center align the image container -->
+      <img src="./static/images/configuration.png"
+           style="width: 90%; max-width: 1000px; height: auto; display: block; margin: auto;" <!-- Make the image responsive and centered -->
+    </div>
       <p>To validate the proposed BT-TL-DMPs framework in real-world settings, we conduct two long-horizon robotic manipulation tasks, which aim to demonstrate how the integration of Behavior Trees, Signal Temporal Logic, and Dynamical Movement Primitives enables modular, reactive, and generalizable robotic behaviors under complex spatio-temporal constraints.</p>
 	<!-- Large plot display -->
    
@@ -395,6 +401,40 @@ The results demonstrate that the proposed framework effectively bridges the symb
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="content" style="margin-bottom: 2rem;">
+      <h2>Additional: Visual Information Processing</h2>
+      <p>At the start of the pipeline of our experiments, we use the vision-language model (VLM) to get the keypoints that require manipulation of objects from the initail in-hand camera view.
+        Here we show an example of using Molmo to point out the keypoints in the intiaial capture.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 80px; margin-top: 0px; margin-bottom: 20px; background-color: #ffffff; padding: 0px; border-radius: 8px;">
+        <div style="text-align: center;">
+          <img src="./static/images/initial.png" style="height: 300px; width: auto; max-width: 100%; object-fit: contain;" />
+          <p>Initial In-hand Camera View</p>
+        </div>
+        <div style="text-align: center;">
+          <img src="./static/images/molmo.png" style="height: 300px; width: auto; max-width: 100%; object-fit: contain;" />
+          <p>Using VLM (Molmo) to point out the keypoints</p>
+        </div>
+      </div>
+
+      <p>Also, we build a pipeline to translate the Natural Language to the needed Temporal Logic for this paper. 
+        Here we show an example of using GPT4-based VLM to give a basic task-level planning. We proposed a Agents method, utilizing useful prompts to generalize the correct STL representation.
+      </p>
+
+		    <div style="text-align: center; margin-top: 20px; margin-bottom: 0px"> <!-- Center align the image container -->
+      <img src="./static/images/nl2stl.png"
+           style="width: 100%; max-width: auto; height: auto; display: block; margin: auto;" <!-- Make the image responsive and centered -->
+    </div>
+
+    </div>
+</section>
+
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX (arXiv Version)</h2>
@@ -403,7 +443,6 @@ The results demonstrate that the proposed framework effectively bridges the symb
   author={Liu, Zezhi and Wu, Shizhen and Luo, Hanqian and Qin, Deyun and Fang, Yongchun},
   journal={arXiv preprint arXiv:2507.14582},
   year={2025}
-}
 }</code></pre>
   </div>
 </section>
